@@ -1,1 +1,1 @@
-# ggmahout
+# Mahout
