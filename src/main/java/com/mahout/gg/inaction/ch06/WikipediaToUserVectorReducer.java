@@ -14,6 +14,7 @@ import java.io.IOException;
  */
 public class WikipediaToUserVectorReducer
         extends Reducer<VarLongWritable, VarLongWritable, VarLongWritable, VectorWritable> {
+    @Override
     public void reduce(VarLongWritable userID, Iterable<VarLongWritable> itemPrefs, Context context)
             throws IOException, InterruptedException {
         Vector userVector = new RandomAccessSparseVector(Integer.MAX_VALUE, 100);

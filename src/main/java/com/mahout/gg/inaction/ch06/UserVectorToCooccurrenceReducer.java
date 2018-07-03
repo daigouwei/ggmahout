@@ -13,6 +13,7 @@ import java.io.IOException;
  * Created by guowei on 2018/6/25.
  */
 public class UserVectorToCooccurrenceReducer extends Reducer<IntWritable, IntWritable, IntWritable, VectorWritable> {
+    @Override
     public void reduce(IntWritable itemIndex1, Iterable<IntWritable> itemIndex2s, Context context)
             throws IOException, InterruptedException {
         Vector cooccurrenceRow = new RandomAccessSparseVector(Integer.MAX_VALUE, 100);
