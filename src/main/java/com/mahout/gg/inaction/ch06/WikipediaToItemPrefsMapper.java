@@ -15,7 +15,6 @@ import java.util.regex.Pattern;
  */
 public class WikipediaToItemPrefsMapper extends Mapper<LongWritable, Text, VarLongWritable, VarLongWritable> {
     private static final Pattern NUMBERS = Pattern.compile("(\\d+)");
-
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
