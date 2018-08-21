@@ -11,10 +11,26 @@
     <name>ggmahout</name>
     <url>http://maven.apache.org</url>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>cloudera</id>
+            <url>https://repository.cloudera.com/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<<<<<<< HEAD
         <mahout.version>0.9</mahout.version>
         <hadoop.version>1.2.1</hadoop.version>
+=======
+        <hadoop.version>2.6.0-mr1-cdh5.14.2</hadoop.version>
+        <mahout.version>0.9</mahout.version>
+>>>>>>> example
     </properties>
 
     <dependencies>
@@ -22,12 +38,29 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-core</artifactId>
             <version>${hadoop.version}</version>
+<<<<<<< HEAD
         </dependency>
 
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
             <version>3.1.0</version>
+=======
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sun.jersey</groupId>
+                    <artifactId>jersey-json</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-io</groupId>
+                    <artifactId>commons-io</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.codehaus.jackson</groupId>
+                    <artifactId>jackson-mapper-asl</artifactId>
+                </exclusion>
+            </exclusions>
+>>>>>>> example
         </dependency>
 
         <dependency>
